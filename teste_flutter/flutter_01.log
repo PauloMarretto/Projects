@@ -1,0 +1,103 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter create --ios-language swift --android-language kotlin .
+
+## exception
+
+FileSystemException: FileSystemException: Exists failed, path = '/home/familia/.pub-cache/hosted/pub.dartlang.org/flutter_template_images-1.0.1/lib/' (OS Error: Permission denied, errno = 13)
+
+```
+#0      _Directory.existsSync (dart:io/directory_impl.dart:94:7)
+#1      ForwardingFileSystemEntity.existsSync (package:file/src/forwarding/forwarding_file_system_entity.dart:45:33)
+#2      ForwardingFileSystemEntity.existsSync (package:file/src/forwarding/forwarding_file_system_entity.dart:45:33)
+#3      _templateImageDirectory (package:flutter_tools/src/template.dart:258:79)
+<asynchronous suspension>
+#4      Template.fromName (package:flutter_tools/src/template.dart:65:38)
+#5      CreateCommand._renderTemplate (package:flutter_tools/src/commands/create.dart:627:46)
+#6      CreateCommand._generateApp (package:flutter_tools/src/commands/create.dart:542:29)
+#7      CreateCommand.runCommand (package:flutter_tools/src/commands/create.dart:379:37)
+#8      _rootRunUnary (dart:async/zone.dart:1198:47)
+#9      _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#10     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#11     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#12     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#13     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#14     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#15     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#16     FlutterProject.organizationNames (package:flutter_tools/src/project.dart)
+#17     _rootRunUnary (dart:async/zone.dart:1198:47)
+#18     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#19     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#20     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#21     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#22     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#23     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#24     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#25     IosProject.productBundleIdentifier (package:flutter_tools/src/project.dart)
+#26     _rootRunUnary (dart:async/zone.dart:1198:47)
+#27     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#28     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#29     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#30     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#31     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#32     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#33     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#34     IosProject._parseProductBundleIdentifier (package:flutter_tools/src/project.dart)
+#35     _rootRunUnary (dart:async/zone.dart:1198:47)
+#36     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#37     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#38     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#39     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#40     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#41     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#42     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#43     IosProject.buildSettingsForBuildInfo (package:flutter_tools/src/project.dart)
+#44     _rootRunUnary (dart:async/zone.dart:1198:47)
+#45     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#46     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#47     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#48     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#49     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#50     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#51     _rootRun (dart:async/zone.dart:1190:13)
+#52     _CustomZone.run (dart:async/zone.dart:1093:19)
+#53     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#54     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#55     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#56     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#57     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#58     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:404:11)
+#59     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:428:5)
+#60     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:168:12)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 1.19.0-4.3.pre, on Linux, locale en_GB.UTF-8)
+    • Flutter version 1.19.0-4.3.pre at /home/Files/flutter
+    • Framework revision 8fe7655ed2 (10 days ago), 2020-07-01 14:31:18 -0700
+    • Engine revision 9a28c3bcf4
+    • Dart version 2.9.0 (build 2.9.0-14.1.beta)
+
+[✗] Android toolchain - develop for Android devices
+    ✗ Unable to locate Android SDK.
+      Install Android Studio from: https://developer.android.com/studio/index.html
+      On first launch it will assist you in installing the Android SDK components.
+      (or visit https://flutter.dev/docs/get-started/install/linux#android-setup for detailed instructions).
+      If the Android SDK has been installed to a custom location, set ANDROID_SDK_ROOT to that location.
+      You may also want to add it to your PATH environment variable.
+
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/linux#android-setup for detailed instructions).
+
+[!] Connected device
+    ! No devices available
+
+! Doctor found issues in 3 categories.
+```
