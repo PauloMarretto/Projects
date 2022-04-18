@@ -1,8 +1,3 @@
-Repositorio de Projetos
+Repository of Projects
 
-Para as linguagens:
-    Go
-    Kotlin
-    Flutter
-
-Este projetos serão separados por pastas por linguagem.
+My Studies
